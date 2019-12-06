@@ -58,9 +58,9 @@ config :portal, Portal.Endpoint,
 
 # Configure your database
 config :datastore, Datastore.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "datastore_dev",
-  hostname: "localhost",
+  username: "sergio",
+  password: "pg",
+  database: "scolastixir_dev",
+  hostname: "127.0.0.1",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

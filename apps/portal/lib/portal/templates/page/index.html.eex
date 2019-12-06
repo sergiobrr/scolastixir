@@ -30,6 +30,9 @@
       <li>
         <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
       </li>
+      <li>
+        <%= svelte "test", %{:name => "svelte rock and roll :-)"} %>
+      </li>
     </ul>
   </article>
 </section>
