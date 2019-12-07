@@ -4,28 +4,92 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Portal · Phoenix Framework</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" />
+    <title>Scolastixir · Portale Libri</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <header>
-      <section class="container">
-        <nav role="navigation">
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-          </ul>
+    <section class="hero">
+      <div class="hero-head">
+        <nav class="navbar container">
+          <div class="navbar-brand">
+            <a href="http://phoenixframework.org/" class="navbar-item">
+              <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
+            </a>
+            <a role="button" class="navbar-burger has-text-info"
+                data-target="mainNavMenu" aria-label="menu"
+                aria-expanded="false">
+				       <span aria-hidden="true"></span>
+				       <span aria-hidden="true"></span>
+				       <span aria-hidden="true"></span>
+				   </a>
+          </div>
+          <div class="navbar-menu" id="mainNavMenu">
+            <div class="navbar-end has-text-info">
+              <a href="/" class="navbar-item is-size-7 is-active">
+                Home
+              </a>
+              <a href="index.html#" class="navbar-item is-size-7">
+                Importa Elenco
+              </a>
+              <a href="index.html#" class="navbar-item is-size-7">
+                Bestsellers
+              </a>
+              <a href="index.html#" class="navbar-item is-size-7">
+                Chi siamo
+              </a>
+              <a href="index.html#" class="navbar-item is-size-7">
+                Contatti
+              </a>
+            </div>
+          </div>
         </nav>
-        <a href="http://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
-        </a>
-      </section>
-    </header>
-    <main role="main" class="container">
+      </div>
+      <div class="hero-body container">
+        <div class="columns">
+          <div class="column left is-5-desktop">
+            <div class="has-text-white">
+             <span class="tag is-success has-text-info is-size-6-mobile is-size-7">
+               Nuovo
+             </span>
+             <span class="is-size-6-mobile is-size-7">
+               Trova i tuoi libri al miglior prezzo di Internet.
+             </span>
+             <span class="has-icons-left">
+               <i aria-hidden="true" class="fas fa-chevron-right"></i>
+             </span>
+           </div>
+            <h1 class="title is-size-2-mobile is-1 is-spaced has-text-white">
+					    Trova i tuoi librei al miglior prezzo di Internet,
+					    tutti insieme, con un click!
+				    </h1>
+            <h2 class="subtitle is-5 has-text-white">
+             Trova tutti i libri per l'anno scolastico al miglior prezzo
+             offerto dai portali su internet, raggruppali con pochi
+             click, scegli fra nuovo ed usato e acquista.
+           </h2>
+            <div class="buttons">
+              <a class="ls-button button has-text-weight-bold is-success">
+                Cerca per ISBN
+              </a>
+              <a class="ls-button button has-text-weight-bold is-info">
+                Importa elenco
+              </a>
+				    </div>
+				  </div>
+          <div class="column right is-5-desktop is-offset-1-desktop">
+            <h2>Da metterci qualcosa...</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
       <%= render @view_module, @view_template, assigns %>
-    </main>
+    </section>
     <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>
