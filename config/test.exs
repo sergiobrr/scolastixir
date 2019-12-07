@@ -8,8 +8,8 @@ config :portal, Portal.Endpoint,
 
 # Configure your database
 config :datastore, Datastore.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "sergio",
+  password: "pg",
   database: "datastore_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
