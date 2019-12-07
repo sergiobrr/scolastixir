@@ -1,5 +1,6 @@
 language: elixir
 sudo: false
+dist: bionic
 otp_release:
   - 21
 elixir:
