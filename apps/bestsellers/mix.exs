@@ -18,7 +18,7 @@ defmodule Bestsellers.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger, :datastore]
     ]
   end
 
@@ -28,6 +28,7 @@ defmodule Bestsellers.MixProject do
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       # {:sibling_app_in_umbrella, in_umbrella: true}
+      {:datastore, in_umbrella: true}
     ]
   end
 end

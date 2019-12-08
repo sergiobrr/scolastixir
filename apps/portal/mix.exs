@@ -24,7 +24,7 @@ defmodule Portal.MixProject do
   def application do
     [
       mod: {Portal.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :datastore]
     ]
   end
 
@@ -54,6 +54,8 @@ defmodule Portal.MixProject do
   #
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
-    [test: ["ecto.create --quiet", "ecto.migrate", "test"]]
+    [
+      test: ["ecto.create --quiet", "ecto.migrate", "test"]
+    ]
   end
 end

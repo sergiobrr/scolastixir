@@ -3,12 +3,12 @@ defmodule Portal.LayoutView do
 
   def svelte(name, props) do
     :div
-    |> tag([data: [props: json(props)], id: generate_id(name)])
+    |> tag(data: [props: json(props)], id: generate_id(name))
   end
 
   def json(props) do
     props
-    |> Jason.encode
+    |> Jason.encode()
     |> case do
       {:ok, message} -> message
       {:error, _} -> ""
@@ -18,5 +18,4 @@ defmodule Portal.LayoutView do
   def generate_id(name) do
     "svelte-#{String.replace(name, " ", "-")}-root"
   end
-
 end
