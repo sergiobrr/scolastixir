@@ -1,6 +1,6 @@
-defmodule Bestsellers do
+defmodule Bestseller do
   @moduledoc """
-  Documentation for Bestsellers.
+  Documentation for Bestseller.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule Bestsellers do
 
   ## Examples
 
-      iex> Bestsellers.hello()
+      iex> Bestseller.hello()
       :world
 
   """

@@ -1,9 +1,9 @@
-defmodule Bestsellers.MixProject do
+defmodule Bestseller.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :bestsellers,
+      app: :bestseller,
       version: "0.1.0",
       build_path: "../../_build",
       config_path: "../../config/config.exs",
@@ -18,7 +18,8 @@ defmodule Bestsellers.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :datastore]
+      extra_applications: [:logger, :datastore],
+      mod: {Bestseller.Application, []}
     ]
   end
 

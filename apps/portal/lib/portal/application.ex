@@ -4,14 +4,18 @@ defmodule Portal.Application do
   @moduledoc false
 
   use Application
+  require Logger
+
+  alias Portal.Cache.CacheSupervisor
 
   def start(_type, _args) do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      Portal.Endpoint
+      Portal.Endpoint,
       # Starts a worker by calling: Portal.Worker.start_link(arg)
       # {Portal.Worker, arg},
+      CacheSupervisor
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
